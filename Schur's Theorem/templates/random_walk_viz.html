@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Random Walk w/ Visualization</h2>
+<p>Current support for requests of dimension 2 and any integer of steps between 200 and 7500 inclusive.
+  <br>Also note that the line color will be green to indicate that the path returned to the origin of the walk and red to idicate the path never returned.</p>
+
+<form method="POST">
+  <label for="dim">Dimension:</label><br>
+  <input type="text" id="dim" name="dim" value="2"><br>
+  <label for="steps">Steps:</label><br>
+  <input type="text" id="steps" name="steps" value="1000"><br>
+  <p style="color: rgb(205, 0, 0)">Please click the button only once, and wait for the visualization to show.<br>
+    For large number steps this can take 2-10 minutes.</p>
+  <input type="submit" value="Run Visualization">
+  {% with steps=steps, dim=dim %}
+    {% include error_message %}
+  {% endwith %}
+</form>
+
+
+<h3>Past 10 Visualizations</h3>
+<div class="row">
+  <div class="column"><img src="upload/walk0.gif" alt="GIF Visualization"/></div>s
+  <div class="column"><img src="upload/walk1.gif" alt="GIF Visualization"/></div>
+</div>
+<div class="row">
+  <div class="column"><img src="upload/walk2.gif" alt="GIF Visualization"/></div>
+  <div class="column"><img src="upload/walk3.gif" alt="GIF Visualization"/></div>
+</div>
+<div class="row">
+  <div class="column"><img src="upload/walk4.gif" alt="GIF Visualization"/></div>
+  <div class="column"><img src="upload/walk5.gif" alt="GIF Visualization"/></div>
+</div>
+<div class="row">
+  <div class="column"><img src="upload/walk6.gif" alt="GIF Visualization"/></div>
+  <div class="column"><img src="upload/walk7.gif" alt="GIF Visualization"/></div>
+</div>
+<div class="row">
+  <div class="column"><img src="upload/walk8.gif" alt="GIF Visualization"/></div>
+  <div class="column"><img src="upload/walk9.gif" alt="GIF Visualization"/></div>
+</div>
+
+</body>
+</html>

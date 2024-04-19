@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Run Schur</h2>
+
+<form method="POST">
+  <label for="dim">Dimension:</label><br>
+  <input type="text" id="dim" name="dim" value="2"><br>
+  <label for="steps">Steps:</label><br>
+  <input type="text" id="steps" name="steps" value="1000"><br>
+  <p style="color: rgb(205, 0, 0)">Please click the button only once, and wait for the visualization to show.<br>
+    For large number steps this can take 2-10 minutes.</p>
+  <input type="submit" value="Run Visualization">
+  {% with steps=steps, dim=dim %}
+    {% include error_message %}
+  {% endwith %}
+</form>
+
+
+</body>
+</html>
