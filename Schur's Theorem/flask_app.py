@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import sys
 import os
 import csv
-import schur
+import old_schur
  
 app = Flask(__name__, static_url_path = "/upload", static_folder = "upload")
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
